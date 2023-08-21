@@ -13,7 +13,13 @@ class NativeAppServiceProvider implements ProvidesPhpIni
      */
     public function boot(): void
     {
-        Window::open();
+        Window::open()
+        ->alwaysOnTop()
+        ->width(400)
+        ->height(250)
+        ->minWidth(300)
+        ->title('Hey Demo Laravel!')
+        ->rememberState();
     }
 
     /**
